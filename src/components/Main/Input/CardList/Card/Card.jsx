@@ -5,13 +5,16 @@ const Card = ({ pokemonName }) => {
   const [pokemonData, setPokemonData] = useState({});
 
   useEffect(() => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-      .then(response => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         setPokemonData(response.data);
-      })
-      .catch(error => {
+      } catch (error) {
         console.log(error);
-      });
+      }
+    }
+
+    fetchData();
   }, [pokemonName]);
 
   return (
@@ -20,7 +23,7 @@ const Card = ({ pokemonName }) => {
       <p>Number: {pokemonData.id}</p>
       <p>Height: {pokemonData.height}</p>
       <p>Weight: {pokemonData.weight}</p>
-      <img src={pokemonData.sprites.front_default} alt="Front sprite" />
+      {pokemonData.sprites && <img src={pokemonData.sprites.front_default} alt="Front sprite" />}
     </div>
   );
 };
