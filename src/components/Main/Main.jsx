@@ -1,7 +1,10 @@
 import React from "react";
+import Input from './Input';
 
 const Main = () => {
-  return <div>Main</div>;
+  return (
+    <Input />
+  );
 };
 
 export default Main;
