@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import Card from "./Card";
+import CardList from "./CardList";
 import Button from '@mui/material/Button';
 
 const Input = () => {
   const [inputValue, setInputValue] = useState("");
-  const [pokemonName, setPokemonName] = useState("");
+  const [searches, setSearches] = useState([]);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    setPokemonName(event.target.pokemon.value);
+    const pokemonName = event.target.pokemon.value;
+    setSearches([...searches, { name: pokemonName }]);
     setInputValue("");
   }
 
@@ -23,7 +24,7 @@ const Input = () => {
         <input type="text" name="pokemon" value={inputValue} onChange={handleInputChange} required />
         <Button variant="contained" type="submit">Submit</Button>
       </form>
-      {pokemonName && <Card pokemonName={pokemonName} />}
+      <CardList searches={searches} />
     </div>
   );
 };
