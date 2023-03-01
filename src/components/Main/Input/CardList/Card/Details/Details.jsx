@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useParams, useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 const Details = () => {
   const { id } = useParams();
@@ -12,13 +13,15 @@ const Details = () => {
   const typeTwo = params.get('typeTwo');
 
   return (
-    <div>
-      <button onClick={() => navigate(-1)}>Back</button>
-      <h2>{id}</h2>
-      <p>Name: {name}</p>
-      <img src={image} alt="Front sprite"></img>
-      <p>Type One: {typeOne}</p>
-      <p>{typeTwo ? `Type Two: ${typeTwo}` : null}</p>
+    <div id='details'>
+      <Button size='small' color='secondary' variant="contained" onClick={() => navigate(-1)}>Back</Button>
+      <div className='fullCard'>
+        <div id='pokemonName'>{id}: {name}</div>
+        <img src={image} alt="Front sprite" id='pokemonImage'></img>
+        <div className='PokemonInfo'>
+          <div>Type: <span id='pokemonType'>{typeOne}{typeTwo ? `, ${typeTwo}` : null}</span></div>
+        </div>
+      </div>
     </div>
   );
 };

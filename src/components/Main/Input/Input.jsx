@@ -37,7 +37,7 @@ const Input = ({ onSearch }) => {
   }
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} id="input">
       <label htmlFor="pokemon">Introduce the name or number of a pokemon </label>
       <input type="text" name="pokemon" value={inputValue} onChange={handleInputChange} required />
     </form>
