@@ -14,6 +14,7 @@ Here you can create a new pokemon. In the image field, you must provide an image
 
 ### /pokemon/:id
 To access this route, you have to click on the image of a pokemon in the "/" route. Here you can see all the information about a pokemon
+
 ![/pokemon/:id](https://user-images.githubusercontent.com/106594858/222215446-14ba254d-e08b-451d-99b2-8e9a7c4c9872.PNG)
 
 ### /search
