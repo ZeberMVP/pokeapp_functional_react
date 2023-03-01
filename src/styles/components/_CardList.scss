@@ -1,0 +1,14 @@
+#cardList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: auto;
+    align-content: space-around
+}
+
+#cardList:after {
+    display: block;
+    margin: 20px;
+    flex: 999 999 auto;
+}

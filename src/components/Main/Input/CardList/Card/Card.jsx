@@ -24,7 +24,7 @@ const Card = ({ pokemon }) => {
 
 
   return (
-    <div>
+    <div className='card'>
       {pokemonData.sprites ? 
         <Link to={`/pokemon/${pokemonData.id}?name=${pokemonData.name}&image=${pokemonData.sprites.other.dream_world['front_default']}&typeOne=${pokemonData.types[0].type.name}&typeTwo=${pokemonData.types[1].type.name}`}>
           <img src={pokemonData.sprites.other.dream_world['front_default']} alt="Front sprite" />

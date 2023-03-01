@@ -1,0 +1,20 @@
+Footer {
+    background-image: linear-gradient(to top, #daedbd 50%, #fcd2af 50%);
+    display: flex;
+    font-size: 2em;
+    min-height: 10vh;
+    text-align: center;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15%;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    i {
+        margin-top: 60%; 
+        width: 20%;
+        color: #736ced;
+    }
+}

@@ -1,0 +1,52 @@
+.fullCard {
+    background: hsl(207, 19%, 16%);
+    width: 350px;
+    height: 460px;
+    padding: 10px 30px;
+
+    margin-inline: auto;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px 0px black;
+    text-align: center;
+}
+
+#pokemonImage {
+    height: 300px;
+    width: 280px;
+    border: 4px groove lightgray;
+    outline: 1px solid black;
+    box-shadow: inset 5px 5px 8px black;
+    padding: 15px;
+    background-color: #809bce;
+}
+
+.PokemonInfo {
+    font-size: 1.1em;
+    text-transform: capitalize;
+    color: white;
+    text-align: left;
+    margin: 20px 10px 0px 10px;
+    height: 90px;
+}
+
+.PokemonInfo * {
+    padding: 3px 0px;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+#pokemonName {
+    text-align: center;
+    margin: 20px;
+    text-transform: uppercase;
+    font-family: cursive;
+    font-size: 1.25em;
+    margin: 20px 10px;
+    color: white;
+
+}
+
+#pokemonType {
+    opacity: 0.8;
+}
